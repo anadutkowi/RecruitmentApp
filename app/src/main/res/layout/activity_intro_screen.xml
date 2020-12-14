@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.introScreen.IntroScreenActivity">
+
+
+    <TextView
+        android:id="@+id/introTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <FrameLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/introTextView">
+        <Button
+            android:id="@+id/introButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_button"
+            android:onClick="nextActivity"/>
+
+        <ProgressBar
+            android:id="@+id/introProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+
+</RelativeLayout>
