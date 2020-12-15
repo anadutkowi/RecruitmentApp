@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
-import com.example.recrutationapp.DataDao
-import com.example.recrutationapp.DataEntity
 import com.example.recrutationapp.R
 import com.example.recrutationapp.application.base.BaseActivity
 import com.example.recrutationapp.feature.accountSearch.AccountSearchActivity
