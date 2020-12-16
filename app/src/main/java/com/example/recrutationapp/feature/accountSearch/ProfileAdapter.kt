@@ -4,12 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recrutationapp.R
 import kotlinx.android.synthetic.main.profile_view.view.*
 
-class ProfileAdapter(val context: Context, private val profileList: List<ProfileData>) :
+class ProfileAdapter(val context: Context, private var profileList: List<ProfileData>) :
     RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -21,11 +20,17 @@ class ProfileAdapter(val context: Context, private val profileList: List<Profile
 
     override fun onBindViewHolder(holder: ProfileAdapter.ProfileViewHolder, position: Int) {
         val listElement = profileList[position]
+        holder.itemView.tag = listElement.id
         holder.bind(position, listElement)
     }
 
     override fun getItemCount(): Int {
         return profileList.size
+
+    }
+    fun filterList(filterList: List<ProfileData>){
+        profileList = filterList
+        notifyDataSetChanged()
 
     }
     inner class ProfileViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

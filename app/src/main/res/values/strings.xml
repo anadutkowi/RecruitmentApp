@@ -4,4 +4,9 @@
     <string name="next_button">Next</string>
     <string name="search">Search</string>
     <string name="repositories">Repositories</string>
+    <string name="goBack">Back</string>
+    <string name="repo_author">Repo By</string>
+    <string name="view_online">View Online</string>
+    <string name="share_repo">Share Repo</string>
+    <string name="star_number">Number of stars ( %1$s )</string>
 </resources>

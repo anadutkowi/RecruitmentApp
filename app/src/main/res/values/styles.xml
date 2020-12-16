@@ -10,5 +10,8 @@
         <item name="android:windowContentOverlay">@null</item>
 
     </style>
+    <style name="ProgressBarCustomColor">
+        <item name="colorAccent">@color/blue</item>
+    </style>
 
 </resources>

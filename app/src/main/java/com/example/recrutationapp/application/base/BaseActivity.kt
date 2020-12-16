@@ -12,4 +12,6 @@ abstract class BaseActivity: DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
+
+
 }
