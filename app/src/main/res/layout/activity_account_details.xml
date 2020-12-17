@@ -121,7 +121,7 @@
         <Button
             android:id="@+id/online_view"
             android:layout_width="118dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="16dp"
@@ -131,5 +131,23 @@
             android:textColor="@color/blue" />
 
     </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <Button
+            android:id="@+id/share_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/share_button"
+            android:drawableStart="@drawable/ic_share_icon"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/share_repo"
+            android:textColor="@color/blue"/>
+    </FrameLayout>
 
 </LinearLayout>

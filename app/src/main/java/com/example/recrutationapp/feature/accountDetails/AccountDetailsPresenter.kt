@@ -1,5 +1,6 @@
 package com.example.recrutationapp.feature.accountDetails
 
+import android.view.View
 import com.example.recrutationapp.application.base.BasePresenter
 import com.example.recrutationapp.feature.accountSearch.ProfileData
 import javax.inject.Inject
@@ -13,7 +14,10 @@ class AccountDetailsPresenter @Inject constructor() : BasePresenter<AccountDetai
         getScreen()!!.setRepoTitle(profile.repoTitle)
         getScreen()!!.setAuthorsName(profile.name)
         getScreen()!!.setStarScore(profile.stars)
+        getScreen()!!.setRepoLink(profile.repoLink)
+
     }
+
 
 
 }

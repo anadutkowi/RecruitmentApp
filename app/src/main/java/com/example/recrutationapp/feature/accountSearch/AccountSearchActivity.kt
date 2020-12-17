@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.view.Window
 import android.view.WindowManager
 import android.widget.EditText
 import androidx.lifecycle.ViewModelProvider
@@ -13,11 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recrutationapp.R
 import com.example.recrutationapp.application.base.BaseActivity
 import com.example.recrutationapp.feature.accountDetails.AccountDetailsActivity
+import com.example.recrutationapp.feature.accountDetails.REPO_LINK
 import com.example.recrutationapp.feature.accountSearch.ProfileData.Companion.profileList
 import kotlinx.android.synthetic.main.activity_account_search.*
 import javax.inject.Inject
 
 const val PROFILE_ID = "id"
+
 
 class AccountSearchActivity : BaseActivity(),
     AccountSearchContract.View {
@@ -40,8 +41,6 @@ class AccountSearchActivity : BaseActivity(),
         editText = findViewById(R.id.input_text)
         editText.addTextChangedListener(textWatcher)
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
-
-            //window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
 
     }
 
