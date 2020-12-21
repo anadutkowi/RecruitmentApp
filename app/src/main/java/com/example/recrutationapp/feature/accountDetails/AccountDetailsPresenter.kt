@@ -15,6 +15,7 @@ class AccountDetailsPresenter @Inject constructor() : BasePresenter<AccountDetai
         getScreen()!!.setAuthorsName(profile.name)
         getScreen()!!.setStarScore(profile.stars)
         getScreen()!!.setRepoLink(profile.repoLink)
+        getScreen()!!.setAuthorsEmail(profile.email)
 
     }
 

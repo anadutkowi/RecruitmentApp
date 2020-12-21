@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".feature.accountDetails.AccountDetailsActivity">
+
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/profile_photo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitCenter"
-            android:background="@color/light_pink"/>
+            android:background="@color/light_pink"
+            android:scaleType="fitCenter" />
 
         <RelativeLayout
             android:id="@+id/goBackSet"
@@ -29,8 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:backgroundTint="#00FFFFFF"
-                android:src="@drawable/ic_back_icon"
-                 />
+                android:src="@drawable/ic_back_icon" />
 
             <TextView
                 android:id="@+id/goBackText"
@@ -55,7 +61,7 @@
             android:alpha="0.6"
             android:text="@string/repo_author"
             android:textAllCaps="true"
-            android:textColor="@color/window_color"
+            android:textColor="@color/grey"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -81,10 +87,10 @@
                 android:id="@+id/stars_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/star_number"
                 android:layout_marginStart="20dp"
                 android:alpha="0.6"
-                android:textColor="@color/window_color"
+                android:text="@string/star_number"
+                android:textColor="@color/grey"
                 android:textSize="16sp" />
 
             <ImageView
@@ -94,28 +100,30 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:alpha="0.8"
-                android:src="@drawable/ic_star_icon2"
-                />
+                android:src="@drawable/ic_star_icon2" />
 
         </RelativeLayout>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
         <TextView
             android:id="@+id/repo_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
-            android:textSize="17sp"
-            android:layout_centerVertical="true"
             android:text="@string/welcome"
+            android:textSize="17sp"
             tools:ignore="RelativeOverlap" />
 
         <Button
@@ -132,22 +140,51 @@
 
     </RelativeLayout>
 
-    <FrameLayout
+
+    <TextView
+        android:id="@+id/commitHistoryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-        <Button
-            android:id="@+id/share_button"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="@drawable/share_button"
-            android:drawableStart="@drawable/ic_share_icon"
-            android:gravity="center"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:text="@string/share_repo"
-            android:textColor="@color/blue"/>
-    </FrameLayout>
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="10dp"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6dp"
+        android:text="@string/commit_title"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 
-</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commit_history_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:autofillHints="@string/appbar_scrolling_view_behavior"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/share_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commitHistoryTitle" />
+
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/share_button"
+        android:drawableStart="@drawable/ic_share_icon"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="@string/share_repo"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

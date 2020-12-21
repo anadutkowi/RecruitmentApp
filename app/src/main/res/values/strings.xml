@@ -9,4 +9,10 @@
     <string name="view_online">View Online</string>
     <string name="share_repo">Share Repo</string>
     <string name="star_number">Number of stars ( %1$s )</string>
+    <string name="copy_link_info">Repo link has been copied!</string>
+    <string name="commit_history">Commit History</string>
+    <string name="commit_1">1</string>
+    <string name="commit_2">2</string>
+    <string name="commit_3">3</string>
+    <string name="commit_title">Commit History</string>
 </resources>

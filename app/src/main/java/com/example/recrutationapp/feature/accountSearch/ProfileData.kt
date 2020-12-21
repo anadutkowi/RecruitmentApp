@@ -8,7 +8,8 @@ data class ProfileData(
     val name: String,
     val stars: String,
     val repoLink: String,
-    val repoTitle: String
+    val repoTitle: String,
+    val email: String
 ) {
     companion object {
         val profileList = listOf(
@@ -17,7 +18,8 @@ data class ProfileData(
                 R.drawable.ic_iconmonstr_github_1,
                 "First author",
                 "800",
-                "https://github.com/magento/commerce-data-export", "First Repo"
+                "https://github.com/magento/commerce-data-export", "First Repo",
+                "firstAuthor@email.com"
             ),
             ProfileData(
                 1,
@@ -25,7 +27,8 @@ data class ProfileData(
                 "Second author",
                 "678",
                 "https://github.com/magento/commerce-data-export",
-                "Second Repo"
+                "Second Repo",
+                "secondAuthor@email.com"
             ),
             ProfileData(
                 2,
@@ -33,7 +36,8 @@ data class ProfileData(
                 "Third author",
                 "289",
                 "https://github.com/magento/commerce-data-export",
-                "Third Repo"
+                "Third Repo",
+                "thirdAuthor@email.com"
             ),
             ProfileData(
                 3,
@@ -41,7 +45,8 @@ data class ProfileData(
                 "Fourth author",
                 "987",
                 "https://github.com/magento/commerce-data-export",
-                "Fourth Repo"
+                "Fourth Repo",
+                "fourthAuthor@email.com"
             ),
             ProfileData(
                 4,
@@ -49,7 +54,8 @@ data class ProfileData(
                 "Fifth author",
                 "490",
                 "https://github.com/magento/commerce-data-export",
-                "Fifth Repo"
+                "Fifth Repo",
+                "fifthAuthor@email.com"
             ),
             ProfileData(
                 5,
@@ -57,7 +63,8 @@ data class ProfileData(
                 "Sixth author",
                 "890",
                 "https://github.com/magento/commerce-data-export",
-                "Sixth Repo"
+                "Sixth Repo",
+                "SixthAuthor@email.com"
             ),
             ProfileData(
                 6,
@@ -65,7 +72,8 @@ data class ProfileData(
                 "Seventh author",
                 "768",
                 "https://github.com/magento/commerce-data-export",
-                "Seventh Repo"
+                "Seventh Repo",
+                "seventhAuthor@email.com"
             ),
             ProfileData(
                 7,
@@ -73,7 +81,8 @@ data class ProfileData(
                 "Eighth author",
                 "978",
                 "https://github.com/magento/commerce-data-export",
-                "Eight Repo"
+                "Eight Repo",
+                "eighthAuthor@email.com"
             )
 
             )
