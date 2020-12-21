@@ -3,32 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature.accountSearch.AccountSearchActivity"
     android:orientation="vertical"
-    >
+    tools:context=".feature.accountSearch.AccountSearchActivity">
 
-        <EditText
-            android:id="@+id/input_text"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/edit_text_background"
-            android:textColor="@color/black"
-            android:drawableStart="@drawable/ic_search_icon"
-            android:drawablePadding="10dp"
-            android:singleLine="true"
-            android:imeOptions="actionDone"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="89dp"
+        android:text="@string/search"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableStart="@drawable/ic_search_icon"
+        android:drawablePadding="10dp"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColor="@color/black" />
 
-            />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/repositories"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/profilesList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="15dp"
-        tools:listitem="@layout/profile_view"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        tools:listitem="@layout/profile_view" />
 </LinearLayout>

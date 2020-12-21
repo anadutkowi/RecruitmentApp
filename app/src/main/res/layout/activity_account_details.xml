@@ -21,7 +21,7 @@
             android:id="@+id/profile_photo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/light_pink"
+            android:background="@color/darker_grey"
             android:scaleType="fitCenter" />
 
         <RelativeLayout
@@ -71,7 +71,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/repo_by"
             android:layout_marginStart="16dp"
-            android:text="@string/welcome"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -122,7 +121,6 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
-            android:text="@string/welcome"
             android:textSize="17sp"
             tools:ignore="RelativeOverlap" />
 
@@ -174,6 +172,7 @@
         android:id="@+id/share_button"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/share_button"
         android:drawableStart="@drawable/ic_share_icon"
@@ -183,8 +182,7 @@
         android:textColor="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,25 +11,24 @@
         android:id="@+id/introTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_above="@id/introProgressBar"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
+        android:lineSpacingExtra="8dp"
         android:text="@string/welcome"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:lineSpacingExtra="8dp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
 
     <ProgressBar
         android:id="@+id/introProgressBar"
-        style="?android:attr/progressBarStyle"
+        style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-         />
+        android:layout_centerVertical="true"
+        android:theme="@style/ProgressBarCustomColor"/>
 
 
 </RelativeLayout>
